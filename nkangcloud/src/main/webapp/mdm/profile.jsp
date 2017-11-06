@@ -82,7 +82,6 @@ MongoDBBasic.updateVisited(uid,currentDate,"profile",res.get("HeadUrl"),res.get(
 		<link rel="stylesheet" type="text/css" href="../mdm/uploadfile_css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="../mdm/uploadfile_css/component.css" />
 <script type="text/javascript" src="../Jsp/JS/jquery-1.8.0.js"></script>
-<script type="text/javascript" src="../nkang/jquery-form.js"></script>
 
 <link rel="stylesheet" href="../nkang/jquery.mobile.min.css" />
 <script src="../Jsp/JS/fusioncharts.js" type="text/javascript"></script>
@@ -371,7 +370,7 @@ height: 15px;}
     */
 $(function(){ 
 
-	$(".Work_Mates_div_list_div2").live("swipeleft",function(){
+	$(".Work_Mates_div_list_div2").on("swipeleft",function(){
 		$(this).css("overflow","visible");
 		$(this).addClass("editBtn");
 		var openid=$(this).find("span.openid").text();
@@ -381,7 +380,7 @@ $(function(){
 		$(this).siblings().removeClass("editBtn");
 		$(this).siblings().find(".edit").remove();
 	});
-	$(".Work_Mates_div_list_div2").live("swiperight",function(){
+	$(".Work_Mates_div_list_div2").on("swiperight",function(){
 		$(this).css("overflow","hidden");
 		$(this).removeClass("editBtn");
 		$(this).find(".edit").remove();
@@ -2550,6 +2549,8 @@ function getNowFormatDate() {
 		 <script src="../mdm/uploadfile_js/custom-file-input.js"></script>
 		 
   <script src="../nkang/editor/jquery-1.11.1.min.js"></script>
+  
+<script type="text/javascript" src="../nkang/jquery-form.js"></script>
   <script type="text/javascript" src="../nkang/editor/froala_editor.min.js"></script>
 <script type="text/javascript" src="../nkang/editor/colors.min.js"></script>
 <script type="text/javascript" src="../nkang/editor/font_family.min.js"></script>
